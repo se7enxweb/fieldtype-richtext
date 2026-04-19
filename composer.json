@@ -1,8 +1,9 @@
 {
-    "name": "ibexa/fieldtype-richtext",
+    "name": "se7enxweb/fieldtype-richtext",
     "description": "Ibexa RichText Extension, including the RichText FieldType.",
-    "license": "GPL-2.0-only",
+    "license": "GPL-2.0-or-later",
     "replace": {
+        "ibexa/fieldtype-richtext": "*",
         "ezsystems/ezplatform-richtext": "*"
     },
     "require": {
