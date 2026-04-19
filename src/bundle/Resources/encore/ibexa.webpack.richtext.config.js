@@ -1,3 +1,4 @@
+const fs = require('fs');
 const path = require('path');
 const ibexaConfigManager = require('@ibexa/frontend-config/webpack-config/manager');
 const configManagers = require(path.resolve('./var/encore/ibexa.richtext.config.manager.js'));
@@ -17,7 +18,9 @@ module.exports = (Encore) => {
         '@ckeditor': path.resolve('./public/bundles/ibexaadminuiassets/vendors/@ckeditor'),
         ckeditor5: path.resolve('./public/bundles/ibexaadminuiassets/vendors/ckeditor5'),
         '@fieldtype-richtext': path.resolve('./vendor/ibexa/fieldtype-richtext'),
-        '@ibexa-admin-ui': path.resolve('./vendor/ibexa/admin-ui'),
+        '@ibexa-admin-ui': fs.existsSync('./vendor/se7enxweb/admin-ui')
+            ? path.resolve('./vendor/se7enxweb/admin-ui')
+            : path.resolve('./vendor/ibexa/admin-ui'),
     });
 
     Encore.addEntry('ibexa-richtext-onlineeditor-js', [
