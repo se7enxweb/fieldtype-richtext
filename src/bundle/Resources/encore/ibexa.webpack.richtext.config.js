@@ -17,7 +17,9 @@ module.exports = (Encore) => {
     Encore.addAliases({
         '@ckeditor': path.resolve('./public/bundles/ibexaadminuiassets/vendors/@ckeditor'),
         ckeditor5: path.resolve('./public/bundles/ibexaadminuiassets/vendors/ckeditor5'),
-        '@fieldtype-richtext': path.resolve('./vendor/ibexa/fieldtype-richtext'),
+        '@fieldtype-richtext': fs.existsSync('./vendor/se7enxweb/fieldtype-richtext')
+            ? path.resolve('./vendor/se7enxweb/fieldtype-richtext')
+            : path.resolve('./vendor/ibexa/fieldtype-richtext'),
         '@ibexa-admin-ui': fs.existsSync('./vendor/se7enxweb/admin-ui')
             ? path.resolve('./vendor/se7enxweb/admin-ui')
             : path.resolve('./vendor/ibexa/admin-ui'),
