@@ -2,7 +2,7 @@ parameters:
     ibexa.field_type.richtext.tag.namespace: fieldtypes.ibexa_richtext.tags
     ibexa.field_type.richtext.style.namespace: fieldtypes.ibexa_richtext.styles
     ibexa.field_type.richtext.embed.namespace: fieldtypes.ibexa_richtext.embed
-    ibexa.field_type.richtext.resources: '%kernel.project_dir%/vendor/ibexa/fieldtype-richtext/src/bundle/Resources/richtext'
+    ibexa.field_type.richtext.resources: '%kernel.project_dir%/vendor/se7enxweb/fieldtype-richtext/src/bundle/Resources/richtext'
 
     ibexa.field_type.richtext.converter.input.xhtml5.resources: '%ibexa.field_type.richtext.resources%/stylesheets/xhtml5/edit/docbook.xsl'
     ibexa.field_type.richtext.converter.edit.xhtml5.resources: '%ibexa.field_type.richtext.resources%/stylesheets/docbook/xhtml5/edit/xhtml5.xsl'
